@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Benchmark Extract"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.eclipse.org/mat/report.xsd">
+
+    <param key="filename_suffix" value="Bench" />
+    <param key="format" value="csv" />
+    <param key="unzip" value="true" />
+
+    <query name="Histogram">
+        <command>histogram</command>
+        <param key="limit" value="-1" />
+    </query>
+
+    <query name="Dominator Tree By Class">
+        <command>dominator_tree -groupBy BY_CLASS</command>
+    </query>
+
+    <query name="Heap Dump Overview">
+        <command>heap_dump_overview</command>
+    </query>
+</section>
