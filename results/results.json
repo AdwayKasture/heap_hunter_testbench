@@ -1,0 +1,819 @@
+{
+  "environment": {
+    "hostname": "archon",
+    "kernel": "5.15.167.4-microsoft-standard-WSL2",
+    "cpus": 20,
+    "mem_total_kb": 16216428,
+    "swap_total_kb": 4194304,
+    "hunt_version": "hunt version 0.1.0",
+    "mat_version": "1.17.0.20260601",
+    "java_version": "openjdk version \"21.0.13.0.3\" 2026-10-24"
+  },
+  "runs": [
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 256,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 14.78,
+      "peak_rss_mb": 1506.8,
+      "index_mb": 416.1,
+      "n_objects": 5482616,
+      "n_edges": 10423997,
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 512,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 15.76,
+      "peak_rss_mb": 1495.3,
+      "index_mb": 416.1,
+      "n_objects": 5482616,
+      "n_edges": 10423997,
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 1024,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 14.48,
+      "peak_rss_mb": 1825.0,
+      "index_mb": 416.1,
+      "n_objects": 5482616,
+      "n_edges": 10423997,
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-512m",
+      "cap_mb": 512,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 27.34,
+      "peak_rss_mb": 739.7,
+      "index_mb": 322.3,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-512m",
+      "cap_mb": 1024,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 30.02,
+      "peak_rss_mb": 1278.7,
+      "index_mb": 322.3,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-512m",
+      "cap_mb": 2048,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 28.85,
+      "peak_rss_mb": 1319.8,
+      "index_mb": 322.3,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 256,
+      "phase": "index",
+      "status": "fail",
+      "wall_s": 106.74,
+      "peak_rss_mb": 3225.2,
+      "index_mb": 0.0,
+      "n_objects": null,
+      "n_edges": null,
+      "notes": "olving references\n[==================>           ] [6/10] building graph\n[=====================>        ] [7/10] computing dominators\nerror: dominator computation needs 768.2 MB for 21771454 objects but the budget is 256.0 MB\n       raise it with --dominator-budget-mb, or index with --no-dominators\n"
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 512,
+      "phase": "index",
+      "status": "fail",
+      "wall_s": 75.55,
+      "peak_rss_mb": 3686.0,
+      "index_mb": 0.0,
+      "n_objects": null,
+      "n_edges": null,
+      "notes": "olving references\n[==================>           ] [6/10] building graph\n[=====================>        ] [7/10] computing dominators\nerror: dominator computation needs 768.2 MB for 21771454 objects but the budget is 512.0 MB\n       raise it with --dominator-budget-mb, or index with --no-dominators\n"
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 1024,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 140.65,
+      "peak_rss_mb": 5968.2,
+      "index_mb": 1650.3,
+      "n_objects": 21771454,
+      "n_edges": 41528575,
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 2048,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 151.55,
+      "peak_rss_mb": 5836.2,
+      "index_mb": 1650.3,
+      "n_objects": 21771454,
+      "n_edges": 41528575,
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-2g",
+      "cap_mb": 1024,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 100.71,
+      "peak_rss_mb": 1353.6,
+      "index_mb": 1318.7,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-2g",
+      "cap_mb": 2048,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 86.49,
+      "peak_rss_mb": 2352.8,
+      "index_mb": 1318.7,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-2g",
+      "cap_mb": 4096,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 92.63,
+      "peak_rss_mb": 4211.4,
+      "index_mb": 1318.7,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 512,
+      "phase": "index",
+      "status": "fail",
+      "wall_s": 355.73,
+      "peak_rss_mb": 7727.9,
+      "index_mb": 0.0,
+      "n_objects": null,
+      "n_edges": null,
+      "notes": "lving references\n[==================>           ] [6/10] building graph\n[=====================>        ] [7/10] computing dominators\nerror: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 512.0 MB\n       raise it with --dominator-budget-mb, or index with --no-dominators\n"
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 1024,
+      "phase": "index",
+      "status": "fail",
+      "wall_s": 302.89,
+      "peak_rss_mb": 8000.8,
+      "index_mb": 0.0,
+      "n_objects": null,
+      "n_edges": null,
+      "notes": "ving references\n[==================>           ] [6/10] building graph\n[=====================>        ] [7/10] computing dominators\nerror: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 1024.0 MB\n       raise it with --dominator-budget-mb, or index with --no-dominators\n"
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 2048,
+      "phase": "index",
+      "status": "fail",
+      "wall_s": 104.94,
+      "peak_rss_mb": 8852.8,
+      "index_mb": 0.0,
+      "n_objects": null,
+      "n_edges": null,
+      "notes": "ving references\n[==================>           ] [6/10] building graph\n[=====================>        ] [7/10] computing dominators\nerror: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 2048.0 MB\n       raise it with --dominator-budget-mb, or index with --no-dominators\n"
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 4096,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 580.39,
+      "peak_rss_mb": 11243.6,
+      "index_mb": 4932.9,
+      "n_objects": 65080283,
+      "n_edges": 124350261,
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-6g",
+      "cap_mb": 2048,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 207.26,
+      "peak_rss_mb": 2503.7,
+      "index_mb": 4032.9,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-6g",
+      "cap_mb": 4096,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 201.38,
+      "peak_rss_mb": 4399.0,
+      "index_mb": 4032.9,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-6g",
+      "cap_mb": 8192,
+      "phase": "index",
+      "status": "ok",
+      "wall_s": 183.83,
+      "peak_rss_mb": 8607.5,
+      "index_mb": 4032.9,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 1024,
+      "phase": "histogram",
+      "status": "ok",
+      "wall_s": 0.21,
+      "peak_rss_mb": 14.8,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 1024,
+      "phase": "dominator",
+      "status": "ok",
+      "wall_s": 0.21,
+      "peak_rss_mb": 18.3,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-512m",
+      "cap_mb": 1024,
+      "phase": "roots",
+      "status": "ok",
+      "wall_s": 0.68,
+      "peak_rss_mb": 79.7,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-512m",
+      "cap_mb": 2048,
+      "phase": "reports",
+      "status": "ok",
+      "wall_s": 56.72,
+      "peak_rss_mb": 1891.9,
+      "index_mb": 322.3,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 2048,
+      "phase": "histogram",
+      "status": "ok",
+      "wall_s": 0.21,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 2048,
+      "phase": "dominator",
+      "status": "ok",
+      "wall_s": 0.2,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-2g",
+      "cap_mb": 2048,
+      "phase": "roots",
+      "status": "ok",
+      "wall_s": 0.21,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-2g",
+      "cap_mb": 4096,
+      "phase": "reports",
+      "status": "ok",
+      "wall_s": 200.6,
+      "peak_rss_mb": 4453.0,
+      "index_mb": 1318.7,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 4096,
+      "phase": "histogram",
+      "status": "ok",
+      "wall_s": 0.2,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 4096,
+      "phase": "dominator",
+      "status": "ok",
+      "wall_s": 0.2,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "hunt",
+      "dump": "mixed-6g",
+      "cap_mb": 4096,
+      "phase": "roots",
+      "status": "ok",
+      "wall_s": 0.43,
+      "peak_rss_mb": 99.5,
+      "index_mb": "",
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    },
+    {
+      "tool": "mat",
+      "dump": "mixed-6g",
+      "cap_mb": 8192,
+      "phase": "reports",
+      "status": "ok",
+      "wall_s": 641.15,
+      "peak_rss_mb": 8497.6,
+      "index_mb": 4032.9,
+      "n_objects": "",
+      "n_edges": "",
+      "notes": ""
+    }
+  ],
+  "correctness": [
+    {
+      "dump": "mixed-512m",
+      "classes_hunt": 739,
+      "classes_mat": 1874,
+      "classes_common": 737,
+      "classes_only_hunt": 2,
+      "classes_only_mat": 1137,
+      "objects_hunt": 5476299,
+      "objects_mat": 5478112,
+      "objects_delta_pct": -0.033,
+      "shallow_bytes_hunt": 370340752,
+      "shallow_bytes_mat": 396610160,
+      "shallow_delta_pct": -6.623,
+      "max_instance_delta": 6240,
+      "max_shallow_delta_bytes": 24684327,
+      "classes_with_deltas": 666,
+      "top_diffs": [
+        {
+          "class": "byte[]",
+          "hunt": [
+            1345643,
+            195823113
+          ],
+          "mat": [
+            1345203,
+            220507440
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.DeepNode",
+          "hunt": [
+            1548666,
+            55751976
+          ],
+          "mat": [
+            1548666,
+            61946640
+          ]
+        },
+        {
+          "class": "java.lang.Object[]",
+          "hunt": [
+            514981,
+            25868712
+          ],
+          "mat": [
+            514975,
+            21562904
+          ]
+        },
+        {
+          "class": "java.lang.String",
+          "hunt": [
+            403799,
+            5653186
+          ],
+          "mat": [
+            403366,
+            9680784
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node[]",
+          "hunt": [
+            59646,
+            7869120
+          ],
+          "mat": [
+            59637,
+            4888528
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.MeshNode",
+          "hunt": [
+            455380,
+            9107600
+          ],
+          "mat": [
+            455380,
+            10929120
+          ]
+        },
+        {
+          "class": "byte[][]",
+          "hunt": [
+            2,
+            3019928
+          ],
+          "mat": [
+            2,
+            1510000
+          ]
+        },
+        {
+          "class": "int[]",
+          "hunt": [
+            7549,
+            25347036
+          ],
+          "mat": [
+            5130,
+            24223688
+          ]
+        },
+        {
+          "class": "java.lang.Integer",
+          "hunt": [
+            89559,
+            358236
+          ],
+          "mat": [
+            89559,
+            1432944
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node",
+          "hunt": [
+            196571,
+            5503988
+          ],
+          "mat": [
+            196553,
+            6289696
+          ]
+        }
+      ]
+    },
+    {
+      "dump": "mixed-2g",
+      "classes_hunt": 739,
+      "classes_mat": 1874,
+      "classes_common": 737,
+      "classes_only_hunt": 2,
+      "classes_only_mat": 1137,
+      "objects_hunt": 21752029,
+      "objects_mat": 21763655,
+      "objects_delta_pct": -0.053,
+      "shallow_bytes_hunt": 1426977977,
+      "shallow_bytes_mat": 1531265696,
+      "shallow_delta_pct": -6.811,
+      "max_instance_delta": 19348,
+      "max_shallow_delta_bytes": 97495973,
+      "classes_with_deltas": 666,
+      "top_diffs": [
+        {
+          "class": "byte[]",
+          "hunt": [
+            5347828,
+            733626395
+          ],
+          "mat": [
+            5347388,
+            831122368
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.DeepNode",
+          "hunt": [
+            6194664,
+            223007904
+          ],
+          "mat": [
+            6194664,
+            247786560
+          ]
+        },
+        {
+          "class": "java.lang.Object[]",
+          "hunt": [
+            2052197,
+            102548448
+          ],
+          "mat": [
+            2052191,
+            85648680
+          ]
+        },
+        {
+          "class": "java.lang.String",
+          "hunt": [
+            1581327,
+            22138578
+          ],
+          "mat": [
+            1580894,
+            37941456
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node[]",
+          "hunt": [
+            237249,
+            31324224
+          ],
+          "mat": [
+            237240,
+            19457728
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.MeshNode",
+          "hunt": [
+            1821526,
+            36430520
+          ],
+          "mat": [
+            1821526,
+            43716624
+          ]
+        },
+        {
+          "class": "byte[][]",
+          "hunt": [
+            2,
+            12079624
+          ],
+          "mat": [
+            2,
+            6039848
+          ]
+        },
+        {
+          "class": "int[]",
+          "hunt": [
+            24228,
+            101243700
+          ],
+          "mat": [
+            18514,
+            96789576
+          ]
+        },
+        {
+          "class": "java.lang.Integer",
+          "hunt": [
+            357995,
+            1431980
+          ],
+          "mat": [
+            357995,
+            5727920
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node",
+          "hunt": [
+            782275,
+            21903700
+          ],
+          "mat": [
+            782257,
+            25032224
+          ]
+        }
+      ]
+    },
+    {
+      "dump": "mixed-6g",
+      "classes_hunt": 739,
+      "classes_mat": 1874,
+      "classes_common": 737,
+      "classes_only_hunt": 2,
+      "classes_only_mat": 1137,
+      "objects_hunt": 65025906,
+      "objects_mat": 65067739,
+      "objects_delta_pct": -0.064,
+      "shallow_bytes_hunt": 4190914958,
+      "shallow_bytes_mat": 4489100512,
+      "shallow_delta_pct": -6.642,
+      "max_instance_delta": 54300,
+      "max_shallow_delta_bytes": 289780855,
+      "classes_with_deltas": 666,
+      "top_diffs": [
+        {
+          "class": "byte[]",
+          "hunt": [
+            15958353,
+            2104734113
+          ],
+          "mat": [
+            15957913,
+            2394514968
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.DeepNode",
+          "hunt": [
+            18583993,
+            669023748
+          ],
+          "mat": [
+            18583993,
+            743359720
+          ]
+        },
+        {
+          "class": "java.lang.Object[]",
+          "hunt": [
+            6151437,
+            307212872
+          ],
+          "mat": [
+            6151431,
+            256636560
+          ]
+        },
+        {
+          "class": "java.lang.String",
+          "hunt": [
+            4690418,
+            65665852
+          ],
+          "mat": [
+            4689985,
+            112559640
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node[]",
+          "hunt": [
+            710823,
+            94309184
+          ],
+          "mat": [
+            710814,
+            58527392
+          ]
+        },
+        {
+          "class": "int[]",
+          "hunt": [
+            64662,
+            317257492
+          ],
+          "mat": [
+            54203,
+            290560728
+          ]
+        },
+        {
+          "class": "com.example.heapforge.stress.MeshNode",
+          "hunt": [
+            5464578,
+            109291560
+          ],
+          "mat": [
+            5464578,
+            131149872
+          ]
+        },
+        {
+          "class": "byte[][]",
+          "hunt": [
+            2,
+            36238816
+          ],
+          "mat": [
+            2,
+            18119440
+          ]
+        },
+        {
+          "class": "java.lang.Integer",
+          "hunt": [
+            1073822,
+            4295288
+          ],
+          "mat": [
+            1073822,
+            17181152
+          ]
+        },
+        {
+          "class": "java.util.HashMap$Node",
+          "hunt": [
+            2313166,
+            64768648
+          ],
+          "mat": [
+            2313148,
+            74020736
+          ]
+        }
+      ]
+    }
+  ]
+}

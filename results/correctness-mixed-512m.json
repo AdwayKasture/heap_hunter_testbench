@@ -1,0 +1,129 @@
+{
+  "dump": "mixed-512m",
+  "classes_hunt": 739,
+  "classes_mat": 1874,
+  "classes_common": 737,
+  "classes_only_hunt": 2,
+  "classes_only_mat": 1137,
+  "objects_hunt": 5476299,
+  "objects_mat": 5478112,
+  "objects_delta_pct": -0.033,
+  "shallow_bytes_hunt": 370340752,
+  "shallow_bytes_mat": 396610160,
+  "shallow_delta_pct": -6.623,
+  "max_instance_delta": 6240,
+  "max_shallow_delta_bytes": 24684327,
+  "classes_with_deltas": 666,
+  "top_diffs": [
+    {
+      "class": "byte[]",
+      "hunt": [
+        1345643,
+        195823113
+      ],
+      "mat": [
+        1345203,
+        220507440
+      ]
+    },
+    {
+      "class": "com.example.heapforge.stress.DeepNode",
+      "hunt": [
+        1548666,
+        55751976
+      ],
+      "mat": [
+        1548666,
+        61946640
+      ]
+    },
+    {
+      "class": "java.lang.Object[]",
+      "hunt": [
+        514981,
+        25868712
+      ],
+      "mat": [
+        514975,
+        21562904
+      ]
+    },
+    {
+      "class": "java.lang.String",
+      "hunt": [
+        403799,
+        5653186
+      ],
+      "mat": [
+        403366,
+        9680784
+      ]
+    },
+    {
+      "class": "java.util.HashMap$Node[]",
+      "hunt": [
+        59646,
+        7869120
+      ],
+      "mat": [
+        59637,
+        4888528
+      ]
+    },
+    {
+      "class": "com.example.heapforge.stress.MeshNode",
+      "hunt": [
+        455380,
+        9107600
+      ],
+      "mat": [
+        455380,
+        10929120
+      ]
+    },
+    {
+      "class": "byte[][]",
+      "hunt": [
+        2,
+        3019928
+      ],
+      "mat": [
+        2,
+        1510000
+      ]
+    },
+    {
+      "class": "int[]",
+      "hunt": [
+        7549,
+        25347036
+      ],
+      "mat": [
+        5130,
+        24223688
+      ]
+    },
+    {
+      "class": "java.lang.Integer",
+      "hunt": [
+        89559,
+        358236
+      ],
+      "mat": [
+        89559,
+        1432944
+      ]
+    },
+    {
+      "class": "java.util.HashMap$Node",
+      "hunt": [
+        196571,
+        5503988
+      ],
+      "mat": [
+        196553,
+        6289696
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "dump": "chain-32",
+  "classes_hunt": 711,
+  "classes_mat": 1798,
+  "classes_common": 709,
+  "classes_only_hunt": 2,
+  "classes_only_mat": 1089,
+  "objects_hunt": 692918,
+  "objects_mat": 691104,
+  "objects_delta_pct": 0.262,
+  "shallow_bytes_hunt": 24939305,
+  "shallow_bytes_mat": 27624312,
+  "shallow_delta_pct": -9.72,
+  "max_instance_delta": 1796,
+  "max_shallow_delta_bytes": 2581108,
+  "classes_with_deltas": 642,
+  "top_diffs": [
+    {
+      "class": "com.example.heapforge.stress.DeepNode",
+      "hunt": [
+        645277,
+        23229972
+      ],
+      "mat": [
+        645277,
+        25811080
+      ]
+    },
+    {
+      "class": "byte[]",
+      "hunt": [
+        11424,
+        361379
+      ],
+      "mat": [
+        11002,
+        563064
+      ]
+    },
+    {
+      "class": "java.lang.String",
+      "hunt": [
+        11318,
+        158452
+      ],
+      "mat": [
+        10903,
+        261672
+      ]
+    },
+    {
+      "class": "java.lang.Object[]",
+      "hunt": [
+        2395,
+        278504
+      ],
+      "mat": [
+        2389,
+        182424
+      ]
+    },
+    {
+      "class": "java.lang.reflect.Method",
+      "hunt": [
+        659,
+        85670
+      ],
+      "mat": [
+        503,
+        44264
+      ]
+    },
+    {
+      "class": "java.util.concurrent.ConcurrentHashMap$Node[]",
+      "hunt": [
+        48,
+        52736
+      ],
+      "mat": [
+        48,
+        27136
+      ]
+    },
+    {
+      "class": "java.lang.Class",
+      "hunt": [
+        11,
+        1276
+      ],
+      "mat": [
+        1807,
+        23688
+      ]
+    },
+    {
+      "class": "java.util.HashMap$Node[]",
+      "hunt": [
+        336,
+        50624
+      ],
+      "mat": [
+        327,
+        30320
+      ]
+    },
+    {
+      "class": "java.lang.ref.SoftReference[]",
+      "hunt": [
+        384,
+        44544
+      ],
+      "mat": [
+        384,
+        29184
+      ]
+    },
+    {
+      "class": "java.lang.reflect.Field",
+      "hunt": [
+        119,
+        11662
+      ],
+      "mat": [
+        0,
+        0
+      ]
+    }
+  ]
+}

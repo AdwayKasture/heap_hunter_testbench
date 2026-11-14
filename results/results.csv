@@ -1,0 +1,58 @@
+tool,dump,cap_mb,phase,status,wall_s,peak_rss_mb,index_mb,n_objects,n_edges,notes
+hunt,mixed-512m,256,index,ok,14.78,1506.8,416.1,5482616,10423997,
+hunt,mixed-512m,512,index,ok,15.76,1495.3,416.1,5482616,10423997,
+hunt,mixed-512m,1024,index,ok,14.48,1825.0,416.1,5482616,10423997,
+mat,mixed-512m,512,index,ok,27.34,739.7,322.3,,,
+mat,mixed-512m,1024,index,ok,30.02,1278.7,322.3,,,
+mat,mixed-512m,2048,index,ok,28.85,1319.8,322.3,,,
+hunt,mixed-2g,256,index,fail,106.74,3225.2,0.0,,,"olving references
+[==================>           ] [6/10] building graph
+[=====================>        ] [7/10] computing dominators
+error: dominator computation needs 768.2 MB for 21771454 objects but the budget is 256.0 MB
+       raise it with --dominator-budget-mb, or index with --no-dominators
+"
+hunt,mixed-2g,512,index,fail,75.55,3686.0,0.0,,,"olving references
+[==================>           ] [6/10] building graph
+[=====================>        ] [7/10] computing dominators
+error: dominator computation needs 768.2 MB for 21771454 objects but the budget is 512.0 MB
+       raise it with --dominator-budget-mb, or index with --no-dominators
+"
+hunt,mixed-2g,1024,index,ok,140.65,5968.2,1650.3,21771454,41528575,
+hunt,mixed-2g,2048,index,ok,151.55,5836.2,1650.3,21771454,41528575,
+mat,mixed-2g,1024,index,ok,100.71,1353.6,1318.7,,,
+mat,mixed-2g,2048,index,ok,86.49,2352.8,1318.7,,,
+mat,mixed-2g,4096,index,ok,92.63,4211.4,1318.7,,,
+hunt,mixed-6g,512,index,fail,355.73,7727.9,0.0,,,"lving references
+[==================>           ] [6/10] building graph
+[=====================>        ] [7/10] computing dominators
+error: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 512.0 MB
+       raise it with --dominator-budget-mb, or index with --no-dominators
+"
+hunt,mixed-6g,1024,index,fail,302.89,8000.8,0.0,,,"ving references
+[==================>           ] [6/10] building graph
+[=====================>        ] [7/10] computing dominators
+error: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 1024.0 MB
+       raise it with --dominator-budget-mb, or index with --no-dominators
+"
+hunt,mixed-6g,2048,index,fail,104.94,8852.8,0.0,,,"ving references
+[==================>           ] [6/10] building graph
+[=====================>        ] [7/10] computing dominators
+error: dominator computation needs 2296.4 MB for 65080283 objects but the budget is 2048.0 MB
+       raise it with --dominator-budget-mb, or index with --no-dominators
+"
+hunt,mixed-6g,4096,index,ok,580.39,11243.6,4932.9,65080283,124350261,
+mat,mixed-6g,2048,index,ok,207.26,2503.7,4032.9,,,
+mat,mixed-6g,4096,index,ok,201.38,4399.0,4032.9,,,
+mat,mixed-6g,8192,index,ok,183.83,8607.5,4032.9,,,
+hunt,mixed-512m,1024,histogram,ok,0.21,14.8,,,,
+hunt,mixed-512m,1024,dominator,ok,0.21,18.3,,,,
+hunt,mixed-512m,1024,roots,ok,0.68,79.7,,,,
+mat,mixed-512m,2048,reports,ok,56.72,1891.9,322.3,,,
+hunt,mixed-2g,2048,histogram,ok,0.21,99.5,,,,
+hunt,mixed-2g,2048,dominator,ok,0.2,99.5,,,,
+hunt,mixed-2g,2048,roots,ok,0.21,99.5,,,,
+mat,mixed-2g,4096,reports,ok,200.6,4453.0,1318.7,,,
+hunt,mixed-6g,4096,histogram,ok,0.2,99.5,,,,
+hunt,mixed-6g,4096,dominator,ok,0.2,99.5,,,,
+hunt,mixed-6g,4096,roots,ok,0.43,99.5,,,,
+mat,mixed-6g,8192,reports,ok,641.15,8497.6,4032.9,,,
