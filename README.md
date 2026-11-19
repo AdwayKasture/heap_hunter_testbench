@@ -28,9 +28,9 @@ correctness: [results/correctness-*.json](results/))
 ./bench.py --dump mixed-512m --hunt-budget 256 --mat-xmx 512m   # single scenario
 ```
 
-Caps run from highest to lowest and the ladder stops at the first
-successful index per tool (lower caps fail identically but only after a
-full re-scan of the dump); `--all-caps` restores the exhaustive ladder.
+Caps run from highest to lowest and the ladder stops at the first failed
+index per tool; lower caps are skipped because they cannot rescue a failure
+at a higher cap. `--all-caps` restores the exhaustive ladder.
 
 ## What is measured
 

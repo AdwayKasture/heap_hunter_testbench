@@ -16,11 +16,12 @@ Usage:
   ./bench.py --full           full matrix incl. mixed-6g and more caps
   ./bench.py --gen-only       only generate missing dumps
   ./bench.py --all-caps       run every cap in the matrix instead of stopping
-                              at the first successful index
+                              at the first failed index
   ./bench.py --dump mixed-512m --hunt-budget 256 --mat-xmx 512m   single scenario
 
-Caps run from highest to lowest and the ladder stops at the first successful
-index per tool (lower caps fail the same way but only after a full re-scan).
+Caps run from highest to lowest and the ladder stops at the first failed
+index per tool; lower caps are skipped because they cannot rescue a failure
+at a higher cap.
 """
 
 import argparse
@@ -453,7 +454,7 @@ def correctness(stem, dump, results_rows):
 def emit_results(rows, reports):
     RESULTS.mkdir(parents=True, exist_ok=True)
     # Caps run highest-first; present results low-cap-first for readability.
-    rows = sorted(rows, key=lambda r: (r["dump"], r["tool"], int(r["cap_mb"] or 0)))
+    rows = sorted(rows, key=lambda r: (r["dump"], r["tool"], -int(r["cap_mb"] or 0)))
     fields = ["tool", "dump", "cap_mb", "phase", "status", "wall_s", "peak_rss_mb",
               "index_mb", "n_objects", "n_edges", "notes"]
     with open(RESULTS / "results.csv", "w", newline="") as fh:
@@ -559,7 +560,7 @@ def main():
     ap.add_argument("--full", action="store_true")
     ap.add_argument("--gen-only", action="store_true")
     ap.add_argument("--all-caps", action="store_true",
-                    help="run every cap in the matrix instead of stopping at the first successful index")
+                    help="run every cap in the matrix instead of stopping at the first failed index")
     ap.add_argument("--dump")
     ap.add_argument("--hunt-budget", type=int)
     ap.add_argument("--mat-xmx", type=int)
@@ -608,10 +609,10 @@ def main():
             rows.append({"tool": "hunt", "dump": stem, "cap_mb": budget, **row})
             print(f"    -> {row['status']} {row['wall_s']}s rss={row['peak_rss_mb']}MB "
                   f"idx={row['index_mb']}MB")
-            if not args.all_caps and row["status"] == "ok":
+            if not args.all_caps and row["status"] != "ok":
                 lower = hunt_caps[hunt_caps.index(budget) + 1:]
                 if lower:
-                    print(f"    success at cap={budget}; skipping lower caps {lower} "
+                    print(f"    failure at cap={budget}; skipping lower caps {lower} "
                           "(use --all-caps to run all)")
                 break
         mat_caps = sorted(matrix[stem]["mat"], reverse=True)
@@ -623,10 +624,10 @@ def main():
             rows.append({"tool": "mat", "dump": stem, "cap_mb": xmx, **row})
             print(f"    -> {row['status']} {row['wall_s']}s rss={row['peak_rss_mb']}MB "
                   f"idx={row['index_mb']}MB")
-            if not args.all_caps and row["status"] == "ok":
+            if not args.all_caps and row["status"] != "ok":
                 lower = mat_caps[mat_caps.index(xmx) + 1:]
                 if lower:
-                    print(f"    success at -Xmx={xmx}m; skipping lower caps {lower} "
+                    print(f"    failure at -Xmx={xmx}m; skipping lower caps {lower} "
                           "(use --all-caps to run all)")
                 break
 
